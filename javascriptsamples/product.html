@@ -1,0 +1,25 @@
+<html></html>
+    <body>
+        <center><b>Total price:</b><p id="totprice">50</p><br/>
+        <button style="background-color: chartreuse " onclick="decrement()">-</button>
+        <input type="text" style="background-color:aquamarine" id="quantity" value="1" size="20">
+        <button style="background-color: chartreuse " onclick="increment()">+</button></center>
+        <script>
+            function increment(){
+                let ip=document.getElementById("quantity").value;
+                ip++;
+                document.getElementById("quantity").value=ip;
+                document.getElementById("totprice").innerHTML=ip*50;
+            }
+            function decrement(){
+                  let ip=document.getElementById("quantity").value;
+                  if(ip>1){
+                ip--;
+                document.getElementById("quantity").value=ip;
+                document.getElementById("totprice").innerHTML=ip*50;
+                  }
+
+            }
+        </script>
+    </body>
+</html>
